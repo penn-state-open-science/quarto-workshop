@@ -17,7 +17,7 @@ format:
 [Rick Gilmore](https://psych.la.psu.edu/people/rog1_/) is Professor of [Psychology at Penn State](https://la.psu.edu/). 
 He is the co-founder and co-director of the [Databrary.org ](https://databrary.org) data library.
 In addition to his research on the development of vision in infants, children, and emerging adults, Gilmore is an advocate for open, transparent, reproducible, and robust research practices.
-He uses Quarto (and its predecessor, R Markdown) for [personal](https://rick-gilmore.com) and [professional](https://gilmore-lab.github.io) websites and blogs, research [reports](https://penn-state-open-science.github.io/survey-fall-2022/), and [course](https://psu-psychology.github.io/psych-490-reproducibility-2023-fall/) materials.
+He uses Quarto (and its predecessor, R Markdown) for [personal](https://rick-gilmore.com) and [professional](https://gilmore-lab.github.io) websites and [blogs](https://w3tm.org), research [reports](https://penn-state-open-science.github.io/survey-fall-2022/), and [course](https://psu-psychology.github.io/psych-490-reproducibility-2023-fall/) materials.
 
 rog1@psu.edu</br>
 :::
