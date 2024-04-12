@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -112,6 +132,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">people</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./topics.html"> 
+<span class="menu-text">topics</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./resources.html"> 
 <span class="menu-text">more</span></a>
   </li>  
@@ -161,14 +185,14 @@ ul.task-list li input[type="checkbox"] {
 <p>This workshop focuses on the Quarto scientific and technical publishing system.</p>
 <p>With Quarto, you can produce websites or blogs, dashboards, scientific articles, presentations, and books that combine text, figures, and code, and can be rendered into a variety of output formats. With Quarto, you can do a number of things that seem like magic tricks to scholars used to more traditional ways of working.</p>
 <p>The workshop is open to anyone who wants to embrace more reproducible practices into their scholarly workflows.</p>
-<p>The philosophy is “Don’t Repeat Yourself: Write it Down” or the more easily remembered “DRY WIT.”</p>
+<p>The philosophy is “<a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Don’t Repeat Yourself</a>: Write it Down” or the more easily remembered “DRY WIT.” We didn’t invent this philosophy <span class="citation" data-cites="Thomas2019-eq Econometrics2023-ow">(<a href="#ref-Econometrics2023-ow" role="doc-biblioref">Econometrics &amp; Free Software, 2023</a>; <a href="#ref-Thomas2019-eq" role="doc-biblioref">Thomas &amp; Hunt, 2019</a>)</span>, nor do we promote it slavishly. There are exceptions to every rule. But like all aphorisms, it helps us remember; and the principles are extremely useful and often save time. Who has time to waste, after all?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://drywit.com/cdn/shop/files/F333B7AF-E198-4C48-A3A7-C321F0F95569.jpg?v=1672289434&amp;width=500" class="img-fluid figure-img"></p>
 <figcaption>drywit.com</figcaption>
 </figure>
 </div>
-<p><a href="./people.html#rick-gilmore">Rick Gilmore</a>, <a href="./people.html#briana-wham">John Thomas</a> will lead the workshop.</p>
+<p><a href="./people.html#rick-gilmore">Rick Gilmore</a>, <a href="./people.html#john-west">John West</a> will lead the workshop.</p>
 <p>More details about the <a href="./schedule.html">schedule</a> and the <a href="./people.html">faculty</a> can be found by following the links.</p>
 </section>
 <section id="location-and-time" class="level2">
@@ -222,9 +246,17 @@ Note
 </div>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Econometrics2023-ow" class="csl-entry" role="listitem">
+Econometrics, &amp; Free Software. (2023, March). Software engineering techniques that non-programmers who write a lot of code can benefit from — the <span>DRY</span> <span>WIT</span> approach. <a href="https://www.r-bloggers.com/2023/03/software-engineering-techniques-that-non-programmers-who-write-a-lot-of-code-can-benefit-from-the-dry-wit-approach/" class="uri">https://www.r-bloggers.com/2023/03/software-engineering-techniques-that-non-programmers-who-write-a-lot-of-code-can-benefit-from-the-dry-wit-approach/</a>. Retrieved from <a href="https://www.r-bloggers.com/2023/03/software-engineering-techniques-that-non-programmers-who-write-a-lot-of-code-can-benefit-from-the-dry-wit-approach/">https://www.r-bloggers.com/2023/03/software-engineering-techniques-that-non-programmers-who-write-a-lot-of-code-can-benefit-from-the-dry-wit-approach/</a>
+</div>
+<div id="ref-Thomas2019-eq" class="csl-entry" role="listitem">
+Thomas, D., &amp; Hunt, A. (2019). <em>The <span>P</span>ragmatic <span>P</span>rogrammer: Your <span>J</span>ourney to <span>M</span>astery</em>. Addison Wesley. Retrieved from <a href="https://play.google.com/store/books/details?id=sNeFxAEACAAJ">https://play.google.com/store/books/details?id=sNeFxAEACAAJ</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

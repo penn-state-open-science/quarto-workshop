@@ -1,31 +1,59 @@
 [
   {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Quarto Workshop",
+    "objectID": "topics.html",
+    "href": "topics.html",
+    "title": "",
     "section": "",
-    "text": "The following schedule is current as of 2024-02-13.\nAll events will be held in the Penn State University Libraries Dewey Room.\n08:30 am Coffee 09:00 am Welcome (Nicole Lazar & Rick Gilmore) 09:15 am Good enough practices for data management (Alaina Pearce) 10:15 am Break 10:30 am Policies (Briana Wham & Ana Enriquez) 11:00 am Interactive workshop 12:00 pm Lunch 12:45 pm Next steps 01:30 pm End of workshop"
+    "text": "Code"
   },
   {
-    "objectID": "schedule.html#wednesday-march-27-2024",
-    "href": "schedule.html#wednesday-march-27-2024",
-    "title": "Quarto Workshop",
-    "section": "",
-    "text": "The following schedule is current as of 2024-02-13.\nAll events will be held in the Penn State University Libraries Dewey Room.\n08:30 am Coffee 09:00 am Welcome (Nicole Lazar & Rick Gilmore) 09:15 am Good enough practices for data management (Alaina Pearce) 10:15 am Break 10:30 am Policies (Briana Wham & Ana Enriquez) 11:00 am Interactive workshop 12:00 pm Lunch 12:45 pm Next steps 01:30 pm End of workshop"
+    "objectID": "topics.html#script-everything",
+    "href": "topics.html#script-everything",
+    "title": "",
+    "section": "Script everything",
+    "text": "Script everything\n\nDRY WIT\nWhat’s your bus factor?\n\n\n\n\nhttps://deviq.com/terms/bus-factor"
   },
   {
-    "objectID": "people.html",
-    "href": "people.html",
-    "title": "Quarto Workshop",
-    "section": "",
-    "text": "Rick Gilmore is Professor of Psychology at Penn State. He is the co-founder and co-director of the Databrary.org data library. In addition to his research on the development of vision in infants, children, and emerging adults, Gilmore is an advocate for open, transparent, reproducible, and robust research practices. He uses Quarto (and its predecessor, R Markdown) for personal and professional websites and blogs, research reports, and course materials.\nrog1@psu.edu"
+    "objectID": "topics.html#basic-tools",
+    "href": "topics.html#basic-tools",
+    "title": "",
+    "section": "Basic tools",
+    "text": "Basic tools\n\nR, Python, Julia, or bash/shell commands\nRStudio or Visual Studio Code\nHTML, YAML, CSS\ngit and GitHub"
   },
   {
-    "objectID": "people.html#faculty",
-    "href": "people.html#faculty",
-    "title": "Quarto Workshop",
+    "objectID": "topics.html#research-report",
+    "href": "topics.html#research-report",
+    "title": "",
+    "section": "Research report",
+    "text": "Research report\n\nData gathering\n\nSources\n\nSurveys\n\nGoogle Forms\nQualtrics\n\nBehavioral data\n\nLocal computers\n\nInstrument data\n\nPermissions\nSharing\nIf using git or GitHub, make use of .gitignore\n\n\n\nData cleaning\n\n\nScriptable visualizations & analyses\n\nVisualizations\n\nggplot2\n\nTables\nStatistics\n\n\n\nExamples\n\nKoBoToolbox workflow"
+  },
+  {
+    "objectID": "topics.html#presentations",
+    "href": "topics.html#presentations",
+    "title": "",
+    "section": "Presentations",
+    "text": "Presentations\n\nPowerPoint\nreveal.js (HTML)\nBeamer"
+  },
+  {
+    "objectID": "topics.html#websites",
+    "href": "topics.html#websites",
+    "title": "",
+    "section": "Websites",
+    "text": "Websites\n\nProject websites\n\nExamples\n\nPLAY Project and An Hour in the Life\nLegacy Project: Visual Acuity\nOpen Science Survey\n\n\n\n\nBlogs\n\n\nCourse sites\n\nOpen Science Bootcamp 2023\nData Management Workshop"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "",
     "section": "",
-    "text": "Rick Gilmore is Professor of Psychology at Penn State. He is the co-founder and co-director of the Databrary.org data library. In addition to his research on the development of vision in infants, children, and emerging adults, Gilmore is an advocate for open, transparent, reproducible, and robust research practices. He uses Quarto (and its predecessor, R Markdown) for personal and professional websites and blogs, research reports, and course materials.\nrog1@psu.edu"
+    "text": "Code"
+  },
+  {
+    "objectID": "resources.html#about",
+    "href": "resources.html#about",
+    "title": "",
+    "section": "About",
+    "text": "About\nThis page has links, code, and data visualizations that support the material presented in the workshop.\nTo reveal or hide the code, click on the button at the upper right.\n\n\n\n\n\n\nTip\n\n\n\nCode hiding (folding) and showing is controlled by the code-fold and code-tools parameters in the YAML header for your document. See resources.qmd document to see how this is done."
   },
   {
     "objectID": "index.html",
@@ -39,7 +67,7 @@
     "href": "index.html#about-the-workshop",
     "title": "Magic tricks with Quarto",
     "section": "About the workshop",
-    "text": "About the workshop\nThis workshop focuses on the Quarto scientific and technical publishing system.\nWith Quarto, you can produce websites or blogs, dashboards, scientific articles, presentations, and books that combine text, figures, and code, and can be rendered into a variety of output formats. With Quarto, you can do a number of things that seem like magic tricks to scholars used to more traditional ways of working.\nThe workshop is open to anyone who wants to embrace more reproducible practices into their scholarly workflows.\nThe philosophy is “Don’t Repeat Yourself: Write it Down” or the more easily remembered “DRY WIT.”\n\n\n\ndrywit.com\n\n\nRick Gilmore, John Thomas will lead the workshop.\nMore details about the schedule and the faculty can be found by following the links."
+    "text": "About the workshop\nThis workshop focuses on the Quarto scientific and technical publishing system.\nWith Quarto, you can produce websites or blogs, dashboards, scientific articles, presentations, and books that combine text, figures, and code, and can be rendered into a variety of output formats. With Quarto, you can do a number of things that seem like magic tricks to scholars used to more traditional ways of working.\nThe workshop is open to anyone who wants to embrace more reproducible practices into their scholarly workflows.\nThe philosophy is “Don’t Repeat Yourself: Write it Down” or the more easily remembered “DRY WIT.” We didn’t invent this philosophy (Econometrics & Free Software, 2023; Thomas & Hunt, 2019), nor do we promote it slavishly. There are exceptions to every rule. But like all aphorisms, it helps us remember; and the principles are extremely useful and often save time. Who has time to waste, after all?\n\n\n\ndrywit.com\n\n\nRick Gilmore, John West will lead the workshop.\nMore details about the schedule and the faculty can be found by following the links."
   },
   {
     "objectID": "index.html#location-and-time",
@@ -63,17 +91,31 @@
     "text": "Support"
   },
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "",
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "Quarto Workshop",
     "section": "",
-    "text": "Code"
+    "text": "Rick Gilmore is Professor of Psychology at Penn State. He is the co-founder and co-director of the Databrary.org data library. In addition to his research on the development of vision in infants, children, and emerging adults, Gilmore is an advocate for open, transparent, reproducible, and robust research practices. He uses Quarto (and its predecessor, R Markdown) for personal and professional websites and blogs, research reports, and course materials.\nrog1@psu.edu\n\n\n\n\n\n\n\nJohn’s photo\n\nJohn’s bio and email."
   },
   {
-    "objectID": "resources.html#about",
-    "href": "resources.html#about",
-    "title": "",
-    "section": "About",
-    "text": "About\nThis page has links, code, and data visualizations that support the material presented in the workshop.\nTo reveal or hide the code, click on the button at the upper right.\n\n\n\n\n\n\nTip\n\n\n\nCode hiding (folding) and showing is controlled by the code-fold and code-tools parameters in the YAML header for your document. See resources.qmd document to see how this is done."
+    "objectID": "people.html#faculty",
+    "href": "people.html#faculty",
+    "title": "Quarto Workshop",
+    "section": "",
+    "text": "Rick Gilmore is Professor of Psychology at Penn State. He is the co-founder and co-director of the Databrary.org data library. In addition to his research on the development of vision in infants, children, and emerging adults, Gilmore is an advocate for open, transparent, reproducible, and robust research practices. He uses Quarto (and its predecessor, R Markdown) for personal and professional websites and blogs, research reports, and course materials.\nrog1@psu.edu\n\n\n\n\n\n\n\nJohn’s photo\n\nJohn’s bio and email."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Quarto Workshop",
+    "section": "",
+    "text": "The following schedule is current as of 2024-02-13.\nAll events will be held in the Penn State University Libraries Dewey Room.\n08:30 am Coffee 09:00 am Welcome (Nicole Lazar & Rick Gilmore) 09:15 am Good enough practices for data management (Alaina Pearce) 10:15 am Break 10:30 am Policies (Briana Wham & Ana Enriquez) 11:00 am Interactive workshop 12:00 pm Lunch 12:45 pm Next steps 01:30 pm End of workshop"
+  },
+  {
+    "objectID": "schedule.html#wednesday-march-27-2024",
+    "href": "schedule.html#wednesday-march-27-2024",
+    "title": "Quarto Workshop",
+    "section": "",
+    "text": "The following schedule is current as of 2024-02-13.\nAll events will be held in the Penn State University Libraries Dewey Room.\n08:30 am Coffee 09:00 am Welcome (Nicole Lazar & Rick Gilmore) 09:15 am Good enough practices for data management (Alaina Pearce) 10:15 am Break 10:30 am Policies (Briana Wham & Ana Enriquez) 11:00 am Interactive workshop 12:00 pm Lunch 12:45 pm Next steps 01:30 pm End of workshop"
   }
 ]

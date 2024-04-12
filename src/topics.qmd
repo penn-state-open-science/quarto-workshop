@@ -1,0 +1,72 @@
+---
+title: ""
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
+---
+
+## Script everything
+
+- [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) WIT
+- What's your [bus factor](https://deviq.com/terms/bus-factor)?
+
+![https://deviq.com/terms/bus-factor](https://deviq.com/static/c9c9794bce142aea055f201300f9c974/7f61c/bus-factor-400x400.webp)
+
+## Basic tools
+
+- R, Python, Julia, or bash/shell commands
+- RStudio or Visual Studio Code
+- HTML, YAML, CSS
+- git and GitHub
+
+## Research report
+
+### Data gathering
+
+- Sources
+  - Surveys
+    - Google Forms
+    - Qualtrics
+  - Behavioral data
+    - Local computers
+  - Instrument data
+- Permissions
+- Sharing
+- If using git or GitHub, make use of .gitignore
+
+### Data cleaning
+
+### Scriptable visualizations & analyses
+
+- Visualizations
+  - [ggplot2](https://ggplot2.tidyverse.org/)
+- Tables
+- Statistics
+
+### Examples
+
+- [KoBoToolbox workflow](https://PLAY-behaviorome/KoBoToolbox/)
+
+## Presentations
+
+- PowerPoint
+- reveal.js (HTML)
+- Beamer
+
+## Websites
+
+### Project websites
+
+- Examples
+  - [PLAY Project](https://play-project.org) and [An Hour in the Life](https://www.anhourinthelife.org)
+  - [Legacy Project: Visual Acuity](https://gilmore-lab.github.io/visual-acuity/)
+  - [Open Science Survey](https://penn-state-open-science.github.io/survey-fall-2022/)
+
+### Blogs
+
+### Course sites
+
+- [Open Science Bootcamp 2023](https://penn-state-open-science.github.io/bootcamp-2023/)
+- [Data Management Workshop](https://penn-state-open-science.github.io/data-mgmt-2024/)

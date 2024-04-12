@@ -23,6 +23,8 @@ website:
         text: schedule
       - href: people.qmd
         text: people
+      - href: topics.qmd
+        text: topics
       - href: resources.qmd
         text: more
   repo-url: https://github.com/penn-state-open-science/quarto-workshop

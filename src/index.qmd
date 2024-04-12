@@ -15,11 +15,15 @@ With Quarto, you can do a number of things that seem like magic tricks to schola
 
 The workshop is open to anyone who wants to embrace more reproducible practices into their scholarly workflows.
 
-The philosophy is "Don't Repeat Yourself: Write it Down" or the more easily remembered "DRY WIT."
+The philosophy is "[Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself): Write it Down" or the more easily remembered "DRY WIT."
+We didn't invent this philosophy [@Thomas2019-eq; @Econometrics2023-ow], nor do we promote it slavishly.
+There are exceptions to every rule.
+But like all aphorisms, it helps us remember; and the principles are extremely useful and often save time.
+Who has time to waste, after all?
 
 ![drywit.com](https://drywit.com/cdn/shop/files/F333B7AF-E198-4C48-A3A7-C321F0F95569.jpg?v=1672289434&width=500)
 
-[Rick Gilmore](people.qmd#rick-gilmore), [John Thomas](people.qmd#briana-wham) will lead the workshop.
+[Rick Gilmore](people.qmd#rick-gilmore), [John West](people.qmd#john-west) will lead the workshop.
 
 More details about the [schedule](schedule.qmd) and the [faculty](people.qmd) can be found by following the links.
 

@@ -23,6 +23,17 @@ rog1@psu.edu</br>
 :::
 ::::
 
+### John West
+
+:::: {.columns}
+::: {.column width="40%"}
+John's photo
+:::
+::: {.column width="60%"}
+John's bio and email.
+:::
+::::
+
 <!-- ### Alaina Pearce -->
 
 <!-- :::: {.columns} -->
