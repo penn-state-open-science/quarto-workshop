@@ -1,0 +1,76 @@
+---
+title: "Magic tricks with Quarto"
+subtitle: "A workshop"
+format: html
+---
+
+![Quarto.org](https://quarto.org/quarto.png)
+
+## About the workshop
+
+This workshop focuses on the Quarto scientific and technical publishing system.
+
+With Quarto, you can produce websites or blogs, dashboards, scientific articles, presentations, and books that combine text, figures, and code, and can be rendered into a variety of output formats.
+With Quarto, you can do a number of things that seem like magic tricks to scholars used to more traditional ways of working.
+
+The workshop is open to anyone who wants to embrace more reproducible practices into their scholarly workflows.
+
+The philosophy is "Don't Repeat Yourself: Write it Down" or the more easily remembered "DRY WIT."
+
+![drywit.com](https://drywit.com/cdn/shop/files/F333B7AF-E198-4C48-A3A7-C321F0F95569.jpg?v=1672289434&width=500)
+
+[Rick Gilmore](people.qmd#rick-gilmore), [John Thomas](people.qmd#briana-wham) will lead the workshop.
+
+More details about the [schedule](schedule.qmd) and the [faculty](people.qmd) can be found by following the links.
+
+## Location and time
+
+:::: {.columns}
+::: {.column width="40%"}
+<!-- ![Dewey Room, University Libraries](https://sc-api.psu.edu/s3/files/styles/4_3_1500w/public/DSC_6681%20for%20PSNews%20Dewey%20room%20naming.jpg?h=6e526c05&itok=fTahAKyt) -->
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="50%"}
+<!-- Dewey Room</br> -->
+<!-- Penn State University Libraries</br> -->
+<!-- University Park, PA -->
+
+<!-- March 27, 2024</br> -->
+<!-- 8:30 am - 2:00 pm -->
+:::
+::::
+
+
+## Register!
+
+The workshop is open to all researchers, especially graduate students and postdoctoral researchers, but space is limited.
+
+::: {.callout-note}
+
+We have hit the maximum number of pre-registrations we can take for the workshop.
+
+If you wish to be added to the waiting list, please email Rick Gilmore <rog1+workshop@psu.edu>.
+
+:::
+
+<!-- Register today by visiting <https://forms.gle/WyD4AxajSnz1Wqe67> -->
+
+<!-- Or via the embedded form below: -->
+
+<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfHQpMvx0RT4t5NYcxcClZ0wdF8MDZh2mH9HKyo-zdsk4lo_Q/viewform?embedded=true" width="640" height="1514" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+
+See updated information about the registrants [here](resources.qmd#fig-registration-time-series) and [here](resources.qmd#fig-registration-by-dept).
+
+## Support
+
+:::: {.columns}
+::: {.column width="15%"}
+<!-- ![](include/img/NSF.svg.png) -->
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="80%"}
+<!-- This workshop is made possible by financial support from the National Science Foundation ([IGE 1955049](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1955049)). -->
+:::
+::::

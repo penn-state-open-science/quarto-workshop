@@ -3,3 +3,4 @@
 .RData
 .Ruserdata
 quarto-workshop.Rproj
+.DS_Store

@@ -1,0 +1,97 @@
+---
+title: ""
+format: 
+  html:
+    toc: true
+---
+
+## Faculty
+
+### Rick Gilmore
+
+:::: {.columns}
+::: {.column width="40%"}
+![](include/img/gilmore-headshot-200x200-72dpi.png)
+:::
+::: {.column width="60%"}
+[Rick Gilmore](https://psych.la.psu.edu/people/rog1_/) is Professor of [Psychology at Penn State](https://la.psu.edu/). 
+He is the co-founder and co-director of the [Databrary.org ](https://databrary.org) data library.
+In addition to his research on the development of vision in infants, children, and emerging adults, Gilmore is an advocate for open, transparent, reproducible, and robust research practices.
+He uses Quarto (and its predecessor, R Markdown) for [personal](https://rick-gilmore.com) and [professional](https://gilmore-lab.github.io) websites and blogs, research [reports](https://penn-state-open-science.github.io/survey-fall-2022/), and [course](https://psu-psychology.github.io/psych-490-reproducibility-2023-fall/) materials.
+
+rog1@psu.edu</br>
+:::
+::::
+
+<!-- ### Alaina Pearce -->
+
+<!-- :::: {.columns} -->
+
+<!-- ::: {.column width="40%"} -->
+
+<!-- ![](include/img/pearce-alaina.jpg) -->
+<!-- ::: -->
+<!-- ::: {.column width="60%"} -->
+<!-- [Alaina Pearce](https://sites.psu.edu/alainapearce/) is Assistant Research Professor in the [Department of Nutritional Sciences](https://hhd.psu.edu/nutrition) and [Center for Childhood Obesity Research](https://hhd.psu.edu/ccor) and is an affiliate of the [Institute of Computational and Data Sciences](https://www.icds.psu.edu). Dr. Pearce is a cognitive neuroscientist and her research interests center on understanding on the reciprocal association between neurocognitive functioning and pediatric obesity. Dr. Pearce’s current research aims to: 1) characterize cognitive function, neural food-cue responsivity, and eating behaviors in children at high and low familial risk for obesity prior to the development of excess adiposity; 2) identify neurocognitive processes and eating behaviors that confer either risk or resiliency to pediatric obesity; and 3) characterize child eating behaviors through meal microstructure and computational modeling. -->
+
+<!-- azp271@psu.edu</br> -->
+<!-- ::: -->
+<!-- :::: -->
+
+<!-- ### Briana Wham -->
+
+<!-- :::: {.columns} -->
+<!-- ::: {.column width="40%"} -->
+<!-- ![](include/img/wham-briana.jpg) -->
+<!-- ::: -->
+<!-- ::: {.column width="60%"} -->
+<!-- Briana Ezray Wham is Research Data Librarian – STEM at the Penn State University Libraries. Dr. Wham conducts data management plan reviews and provides guidance, training, and consulting services for data management planning, active data management, reproducible research workflows using R, data visualization, data publication, as well as ORCiD integration and utility. She also works as one of the data curators for [ScholarSphere](https://scholarsphere.psu.edu), Penn State's institutional repository. Prior to joining Penn State University Libraries, Briana received her Ph.D. in Entomology from Penn State, where she studied aspects of ecology, evolution, and conservation of bee communities. Briana’s interests include open science, museum collection digitization, and bee conservation. -->
+
+<!-- bde125@psu.edu -->
+<!-- ::: -->
+<!-- :::: -->
+
+<!-- ### Ana Enriquez -->
+
+<!-- :::: {.columns} -->
+<!-- ::: {.column width="40%"} -->
+<!-- ![](include/img/enriquez-ana.jpg) -->
+<!-- ::: -->
+<!-- ::: {.column width="60%"} -->
+
+<!-- Ana Enriquez is the Copyright Officer and Head of the Office of Scholarly Communications and Copyright at the Penn State University Libraries. A copyright lawyer by training, she teaches the university community about copyright and publishing, assists researchers in making their work freely available to the public, and supports the Libraries’ negotiations with publishers. Her research focuses on copyright, teaching copyright, and leveraging library expertise to advance the open access movement.  -->
+
+<!-- aee32@psu.edu</br></br> -->
+<!-- ::: -->
+<!-- :::: -->
+
+<!-- ### Bari Fuchs -->
+
+<!-- :::: {.columns} -->
+<!-- ::: {.column width="40%"} -->
+<!-- ![](include/img/fuchs-bari.png) -->
+<!-- ::: -->
+<!-- ::: {.column width="60%"} -->
+
+<!-- Bari Fuchs recently received her Ph.D. in Nutritional Sciences at Penn State, where she studied neural and decision-making correlates of pediatric eating behaviors. She has 10 years of experience managing and processing multi-modal data (survey, behavioral, neuroimaging) for research studies. Dr. Fuchs places a strong emphasis on transparency and reproducibility in her data management approach. She achieves this by developing software to clean and organize data, implementing field-standardized data organization structures, and sharing data and code on public repositories. -->
+
+<!-- baf44@psu.edu  -->
+
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ### Sai Koneru -->
+
+<!-- :::: {.columns} -->
+<!-- ::: {.column width="40%"} -->
+<!-- ![](include/img/koneru-sai.jpg) -->
+
+<!-- ::: -->
+<!-- ::: {.column width="60%"} -->
+
+<!-- Sai is a PhD student in the college of Information Sciences and Technology. His research is in Natural Language Processing, developing novel methods to combine text and underlying network structure to understand scholarly output. Sai’s interests include open science, scientific reproducibility, and disinformation. -->
+
+<!-- sdk96@psu.edu -->
+
+<!-- ::: -->
+<!-- ::: -->

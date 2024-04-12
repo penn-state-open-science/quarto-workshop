@@ -1,0 +1,496 @@
+---
+title: ""
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
+params:
+  update_data: yes
+---
+
+## About
+
+This page has links, code, and data visualizations that support the material presented in the workshop.
+
+To reveal or hide the code, click on the button at the upper right.
+
+::: {.callout-tip}
+
+Code hiding (folding) and showing is controlled by the `code-fold` and `code-tools` parameters in the YAML header for your document.
+See [`resources.qmd` document](https://github.com/penn-state-open-science/data-mgmt-2024/blob/main/src/resources.qmd) to see how this is done.
+
+:::
+
+<!-- ## Information sources -->
+
+<!-- Here are links to some of the sources mentioned during the workshop presentations. -->
+
+<!-- ### Good enough data management and project management practices (Alaina Pearce) -->
+
+<!-- - Talk slides ([PDF](pdf/2024_GoodEnoughDataManagementWorkshop.pdf)). -->
+
+<!-- - [The Turing Way](https://the-turing-way.netlify.app/index.html) handbook to reproducible, ethical and collaborative data science. -->
+<!-- - Goodman, A., Pepe, A., Blocker, A. W., Borgman, C. L., Cranmer, K., Crosas, M., Di Stefano, R., Gil, Y., Groth, P., Hedstrom, M., Hogg, D. W., Kashyap, V., Mahabal, A., Siemiginowska, A., & Slavkovic, A. (2014). Ten simple rules for the care and feeding of scientific data. *PLoS Computational Biology*, *10*(4), e1003542. <https://doi.org/10.1371/journal.pcbi.1003542>. -->
+<!-- - Version control -->
+<!--   - [GitHub](https://github.com), a web service for version control using git. -->
+<!--   - [Subversion](https://subversion.apache.org), a web service for version control using git -->
+<!-- - Penn State Open Science [GitHub repo](https://github.com/penn-state-open-science) -->
+<!--   - 2023 Bootcamp [site](https://penn-state-open-science.github.io/bootcamp-2023/), [repo](https://github.com/penn-state-open-science//bootcamp-2023/) -->
+<!--   - 2022-23 interest and knowledge survey [site](https://penn-state-open-science.github.io/survey-fall-2022), [repo](https://github.com/penn-state-open-science/survey-fall-2022) -->
+<!-- - Wickham, H. (2014). Tidy Data, *Journal of Statistical Software*, <https://doi.org/10.18637/jss.v059.i10>. -->
+
+<!-- ### Data management policies (Briana Wham and Ana Enriquez) -->
+
+<!-- - Talk slides ([pptx](pptx/wham-enriquez-policies-for-data-mgmt-2024-03-27.pptx)) -->
+
+<!-- - The (Dr. Alondra) Nelson [memo](https://www.whitehouse.gov/wp-content/uploads/2022/08/08-2022-OSTP-Public-access-Memo.pdf) on "Ensuring Free, Immediate, and Equitable Access to Federally Funded Research" -->
+<!-- - [NIH Data Management and Sharing Policy](https://sharing.nih.gov/data-management-and-sharing-policy) -->
+<!-- - Data Management Plan Tool [(DMPTool)](https://dmptool.org) -->
+<!-- - [Penn State Data Storage Finder](https://datastoragefinder.psu.edu) -->
+<!-- - (Draft) [Penn State Research Data Management Policy](https://www.research.psu.edu/research-data-management-policy) -->
+<!-- - [Penn State Policy IP01](https://policy.psu.edu/policies/ip01#:~:text=The%20University%20is%20granted%20the,scope%20of%20the%20University%20employment) "Ownership and Management of Intellectual Property (Formerly RA11 - Patents and Copyrights [Intellectual Property])" -->
+
+<!-- ### Case study -->
+
+<!-- - Sample "untidy" [data](xlsx/data_mgmt_workshop_data.xlsx) -->
+
+<!-- ![Comments on untidy data sample](include/img/sample-data-file-comments-1-of-2.jpeg) -->
+
+<!-- ![Comments on untidy data sample](include/img/sample-data-file-comments-2-of-2.jpeg) -->
+
+<!-- - Problem with MS Excel's automatic [conversion names for genes](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates) -->
+
+<!-- ### Discussion -->
+
+<!-- - [Catch-22](https://en.wikipedia.org/wiki/Catch-22) and Joseph Heller's [career at Penn State](https://cals.la.psu.edu/news/marathon-reading-of-catch-22/) -->
+
+<!-- ## Registrant data -->
+
+<!-- We try to practice what we preach, so we include below the code we use to download the registration data and visualize it. -->
+<!-- Click on the `code` arrow to show or hide the code. -->
+<!-- The data file itself remains private. -->
+<!-- We have added `csv/` to the `.gitignore` file so that the data remains available only to users who have it locally on their computers. -->
+
+<!-- ::: {.callout-note} -->
+
+<!-- Rick Gilmore has stored his Gmail account information in an environment variable called `GMAIL_SURVEY`. -->
+
+<!-- To do something similar, use the [`usethis` package](https://cran.r-project.org/package=usethis) to open your `.Renviron` variable. -->
+
+<!-- ``` -->
+<!-- install.packages("usethis") # if not installed already -->
+<!-- usethis::edit_r_environ() -->
+<!-- ``` -->
+
+<!-- Add an entry like `GMAIL_SURVEY="your.google.acct@gmail.com"` to the file. -->
+<!-- Save it, and restart R. -->
+
+<!-- Then, run the following line in your console: -->
+
+<!-- ``` -->
+<!-- install.packages("googledrive") # if not installed already -->
+<!-- googledrive::drive_auth() -->
+<!-- ``` -->
+
+<!-- You will see something like this: -->
+
+<!-- ![](include/img/google-auth-console.png) -->
+
+<!-- Select '1' to initiate a Google authentication screen in your default browser. -->
+<!-- The browser should launch with a window asking your permission to authorize access to your Google account. -->
+<!-- Grant access to Tidyverse API Packages. -->
+<!-- Remember, *you* continue to control what code from the Tidyverse accesses specific Google sheets. -->
+
+<!-- Once these steps are complete, the *automated* updating code below should work. -->
+
+<!-- ::: -->
+
+<!-- We download the data as a CSV (if `params$update_data == TRUE`). -->
+
+<!-- ```{r set-up-update-data} -->
+<!-- library(ggplot2) -->
+
+<!-- if (!dir.exists('csv')) { -->
+<!--   message("Creating missing `csv/`.") -->
+<!--   dir.create("csv") -->
+<!-- } -->
+
+<!-- update_figs = TRUE -->
+
+<!-- if (params$update_data) { -->
+<!--   options(gargle_oauth_email = Sys.getenv("GMAIL_SURVEY")) -->
+<!--   googledrive::drive_auth() -->
+
+<!--   new_fn <- "csv/data-mgmt-wksp.csv" -->
+<!--   file.rename(new_fn, "csv/_data-mgmt-wkshp.csv") -->
+<!--   googledrive::drive_download( -->
+<!--     "Data Management Workshop Spring 2024: Registration (Responses)", -->
+<!--     path = new_fn, -->
+<!--     type = "csv", -->
+<!--     overwrite = TRUE -->
+<!--   ) -->
+<!--   message("Data updated.") -->
+<!-- } else { -->
+<!--   if (!file.exists("csv/data-mgmt-wksp.csv")) { -->
+<!--     warning("File not found: 'csv/data-mgmt-wksp.csv'") -->
+<!--     update_figs = FALSE -->
+<!--   } else { -->
+<!--     message("Using previously stored data.") -->
+<!--   } -->
+<!-- } -->
+<!-- ``` -->
+
+<!-- We load the saved CSV. -->
+
+<!-- ```{r load-registration-data} -->
+<!-- if (update_figs) { -->
+<!--   registrations <- -->
+<!--     readr::read_csv("csv/data-mgmt-wksp.csv", show_col_types = FALSE) -->
+<!-- } -->
+<!-- ``` -->
+
+<!-- Then we clean the data by renaming the variables, dropping the "no's", wrangling the unit names, and adding a `college` variable. -->
+
+<!-- ::: {.callout-note} -->
+
+<!-- **TO-DO:** Remove duplicate entries. Drop timestamp beforehand since it will be unique even among duplicates in other fields. -->
+
+<!-- ::: -->
+
+<!-- ```{r clean-registration-data, eval=update_figs} -->
+<!-- registrations_clean <- registrations |> -->
+<!--   dplyr::rename( -->
+<!--     timestamp = "Timestamp", -->
+<!--     email = 'Email Address', -->
+<!--     attend = "Will you attend the workshop on Wednesday, March 27, 2024?", -->
+<!--     name = "What is your name?", -->
+<!--     unit = "What is your department or unit?", -->
+<!--     position = "What is your current position?", -->
+<!--     have_case_study = "Do you have a project or dataset that you would like to have considered for a hands-on case study?", -->
+<!--     case_study_details = "If yes, in a sentence or two, please describe your project or dataset.", -->
+<!--     comments = "Any comments?" -->
+<!--   ) |> -->
+<!--   # Remove duplicate rows -->
+<!--   dplyr::distinct() |> -->
+<!--   # Convert timestamp into proper dates -->
+<!--   dplyr::mutate(timestamp = lubridate::mdy_hms(timestamp, -->
+<!--                                                tz = "America/New_York")) |> -->
+<!--   # Normalize unit names -->
+<!--   dplyr::mutate( -->
+<!--     unit = dplyr::recode( -->
+<!--       unit, -->
+<!--       `ESM-Ecosystem Science and Mgmt` = "Ecosystem Science & Mgmt", -->
+<!--       `Earth and Environmental Systems Institute` = "Earth & Environmental Systems Institute", -->
+<!--       `Earth and Environmental Systems Institute` = "Earth & Environmental Systems Institute", -->
+<!--       `Civil and Environmental Engineering` = "Civil & Environmental Engineering", -->
+<!--       `Civil and Environmental Eng` = "Civil & Environmental Engineering", -->
+<!--       `FOOD SCIENCE` = "Food Science", -->
+<!--       `Earth and Mineral Sciences, Energy Institute` = "Energy Institute", -->
+<!--       `Center for Healthy Aging / HHD` = "Center for Healthy Aging", -->
+<!--       `BMB` = "Biochemistry, Microbiology, & Molecular Biology", -->
+<!--       `Biochemistry, Microbiology and Molecular Biology` = "Biochemistry, Microbiology, & Molecular Biology", -->
+<!--       `Spanish, Italian and Portuguese` = "Spanish, Italian, & Portuguese", -->
+<!--       `Spanish, Italian, and Portuguese` = "Spanish, Italian, & Portuguese", -->
+<!--       `SIP` = "Spanish, Italian, & Portuguese", -->
+<!--       `Department of Nutritional Sciences` = "Nutritional Sciences", -->
+<!--       `Department of Medicine, Division of Endocrinology` = "Medicine", -->
+<!--       `Nutrition` = "Nutritional Sciences", -->
+<!--       `Department of Statistics` = "Statistics", -->
+<!--       `RPTM` = "Recreation, Park, & Tourism Management", -->
+<!--       `Kinesiology & Developmental Psychology` = "Kinesiology", -->
+<!--       `Educational psychology` = "Educational Psychology", -->
+<!--       `Clinical Psychology` = "Psychology", -->
+<!--       `Communication Sciences and Disorders` = "Communication Sciences & Disorders", -->
+<!--       `Center for Healthy Aging; Department of Psychology` = "Center for Healthy Aging", -->
+<!--       `MCIBS` = "Molecular, Cellular, & Integrative Biosciences", -->
+<!--       `Department of Chemical Engineering` = "Chemical Engineering", -->
+<!--       `Biobehavioral health` = "Biobehavioral Health", -->
+<!--       `EE` = "Electrical Engineering", -->
+<!--       `Agricultural and biological engineering` = "Agricultural & Biological Engineering" -->
+<!--       ) -->
+<!--   ) |> -->
+<!--   # Drop no attends -->
+<!--   dplyr::filter(attend == "Yes") |> -->
+<!--   # Add college -->
+<!--   dplyr::mutate( -->
+<!--     college = dplyr::case_match( -->
+<!--       unit, -->
+<!--       "Statistics" ~ "ECoS", -->
+<!--       "Biology" ~ "ECoS", -->
+<!--       "Biochemistry, Microbiology, & Molecular Biology" ~ "ECoS", -->
+<!--       "Physics" ~ "ECoS", -->
+<!--       "Chemistry" ~ "ECoS", -->
+<!--       "Astronomy & Astrophysics" ~ "ECoS", -->
+<!--       "Eberly" ~ "ECos", -->
+<!--       "Eberly" ~ "ECos", -->
+<!--       "Psychology" ~ "CLA", -->
+<!--       "Spanish, Italian, & Portuguese" ~ "CLA", -->
+<!--       "Research Informatics and Publishing" ~ "Libraries", -->
+<!--       "Political Science" ~ "CLA", -->
+<!--       "Applied Linguistics" ~ "CLA", -->
+<!--       "Global Languages & Literatures" ~ "CLA", -->
+<!--       "Sociology" ~ "CLA", -->
+<!--       "English" ~ "CLA", -->
+<!--       "C-SoDA" ~ "CLA", -->
+<!--       "Office of Digital Pedagogies and Initiatives" ~ "CLA", -->
+<!--       "Asian Studies" ~ "CLA", -->
+<!--       "Anthropology" ~ "CLA", -->
+<!--       "Linguistics" ~ "CLA", -->
+<!--       "Center for Language Science" ~ "CLA", -->
+<!--       "Foreign Languages" ~ "CLA", -->
+<!--       "Languages and Literature" ~ "CLA", -->
+<!--       "IST" ~ "IST", -->
+<!--       "Chemical Engineering" ~ "Eng", -->
+<!--       "Civil & Environmental Engineering" ~ "Eng", -->
+<!--       "Material Science and Engineering" ~ "Eng", -->
+<!--       "Engineering Science & Mechanics" ~ "Eng", -->
+<!--       "Biomedical Engineering" ~ "Eng", -->
+<!--       "Mechanical Engineering" ~ "Eng", -->
+<!--       "Electrical Engineering" ~ "Eng", -->
+<!--       "Chemical Engineering" ~ "Eng", -->
+<!--       "Nutritional Sciences" ~ "HHD", -->
+<!--       "HDFS" ~ "HHD", -->
+<!--       "Communication Sciences & Disorders" ~ "HHD", -->
+<!--       "Kinesiology" ~ "HHD", -->
+<!--       "Recreation, Park, & Tourism Management" ~ "HHD", -->
+<!--       "Prevention Center" ~ "HHD", -->
+<!--       "Bellisario College of Communication" ~ "Comm", -->
+<!--       "Marketing" ~ "Smeal", -->
+<!--       "Food Science" ~ "Ag", -->
+<!--       "Ecosystem Science & Mgmt" ~ "Ag", -->
+<!--       "Entomology" ~ "Ag", -->
+<!--       "Plant Pathology & Environmental Microbiology" ~ "Ag", -->
+<!--       "Plant Science" ~ "Ag", -->
+<!--       "Agricultural & Biological Engineering" ~ "Ag", -->
+<!--       "Landscape Architecture" ~ "Arts & Arch", -->
+<!--       "Neuroscience" ~ "Med", -->
+<!--       "Medicine" ~ "Med", -->
+<!--       "College of Human and Health Development" ~ "HHD", -->
+<!--       "Center for Healthy Aging" ~ "HHD", -->
+<!--       "Center for Childhood Obesity Research" ~ "HHD", -->
+<!--       "Biobehavioral Health" ~ "HHD", -->
+<!--       "Earth & Environmental Systems Institute" ~ "EMS", -->
+<!--       "Geography" ~ "EMS", -->
+<!--       "Energy Institute" ~ "EMS", -->
+<!--       "Geosciences" ~ "EMS", -->
+<!--       "Nursing" ~ "Nursing", -->
+<!--       "Educational Psychology" ~ "Ed", -->
+<!--       "Molecular, Cellular, & Integrative Biosciences" ~ "Huck", -->
+<!--       "University Libraries" ~ "Libraries" -->
+<!--     ), -->
+<!--     .default = "Unknown", -->
+<!--     .missing = "Unknown" -->
+<!--   ) -->
+
+<!-- registrations_clean <- registrations_clean |> -->
+<!--   dplyr::mutate( -->
+<!--   confirmed = dplyr::case_match( -->
+<!--       confirmation_response, -->
+<!--       "Sorry, can't make it" ~ "Decline", -->
+<!--       "No response" ~ "No response", -->
+<!--       "Yes,  I'll be there" ~ "Confirm", -->
+<!--       NA ~ "No response", -->
+<!--       "presenter" ~ "Confirm"), -->
+<!--       .default = "Unknown", -->
+<!--     .missing = "Unknown" -->
+<!--   ) -->
+<!-- ``` -->
+
+<!-- The following is used to modify the above code to capture new unit names, clean/normalize them, and assign them to colleges. -->
+
+<!-- ```{r, eval=update_figs} -->
+<!-- college_na <- is.na(registrations_clean$college) -->
+<!-- registrations_clean$unit[college_na] -->
+<!-- ``` -->
+
+<!-- ### Time series -->
+
+<!-- ```{r fig-registration-time-series, fig.cap="Time series of registrations from 2014-02-13 to present", eval=update_figs} -->
+<!-- registrations_clean |> -->
+<!--   dplyr::arrange(timestamp) |> -->
+<!--   dplyr::mutate(resp_index = seq_along(timestamp)) |> -->
+<!--   ggplot() + -->
+<!--   aes(x = timestamp, y = resp_index) + -->
+<!--   geom_point() + -->
+<!--   # geom_line(group = 1) + -->
+<!--   theme(axis.text.x = element_text(angle = 90)) + -->
+<!--   labs(x = NULL, y = 'n') + -->
+<!--   theme(legend.position = "bottom", legend.title = element_blank()) -->
+<!-- ``` -->
+
+<!-- ### Unit & College -->
+
+<!-- #### Registrations -->
+
+<!-- ```{r fig-registrations-by-dept, fig.cap="Registrations by department", eval=update_figs} -->
+<!-- registrations_by_dept <- registrations_clean |> -->
+<!--   dplyr::filter(!is.na(unit)) -->
+
+<!-- registrations_by_dept |> -->
+<!--   dplyr::arrange(desc(unit)) |> -->
+<!--   ggplot() + -->
+<!--   aes(x = unit, fill = college) + -->
+<!--   geom_bar() + -->
+<!--   theme(legend.position = "bottom", legend.title = element_blank()) + -->
+<!--   coord_flip() -->
+
+<!-- n_registrations <- dim(registrations_clean)[1] -->
+
+<!-- n_depts_registrations <- length(unique(registrations_by_dept$unit)) -->
+<!-- n_coll_registrations <- length(unique(registrations_by_dept$college)) -->
+<!-- ``` -->
+
+<!-- We had `{r} n_registrations` registrations from `{r} n_depts_registrations` departments representing `{r} n_coll_registrations` colleges. -->
+
+<!-- ```{r fig-registrations-by-college, fig.cap="Registrations by college", eval=update_figs} -->
+<!-- registrations_by_dept |> -->
+<!--   ggplot() + -->
+<!--   aes(x = college, fill = college, color = college) + -->
+<!--   geom_bar() + -->
+<!--   theme(axis.text.x = element_blank()) + -->
+<!--   theme(legend.position = "bottom", legend.title = element_blank()) -->
+<!-- ``` -->
+
+<!-- #### Confirmations -->
+
+<!-- ```{r tbl-confirmations-by-college} -->
+<!-- xtabs(~ confirmed + college, registrations_clean) -->
+
+<!-- confirmed <- registrations_clean |> -->
+<!--   dplyr::filter(confirmed == "Confirm") -->
+
+<!-- n_confirmed <- dim(confirmed)[1] -->
+<!-- n_depts_confirmed <- length(unique(confirmed$unit)) -->
+<!-- n_coll_confirmed <- length(unique(confirmed$college)) -->
+<!-- ``` -->
+
+<!-- We had `{r} n_confirmed` people from `{r} n_depts_confirmed` departments representing `{r} n_coll_confirmed` colleges confirm attendance. -->
+
+<!-- #### Attendees -->
+
+<!-- ```{r} -->
+<!-- attendees_clean <- registrations_clean |> -->
+<!--   dplyr::filter(status %in% c("attended", "presenter")) -->
+
+<!-- n_attendees <- dim(attendees_clean)[1] -->
+
+<!-- attendees_by_dept <- attendees_clean |> -->
+<!--   dplyr::filter(!is.na(unit)) -->
+
+<!-- n_depts_attendees <- length(unique(attendees_by_dept$unit)) -->
+<!-- n_coll_attendees <- length(unique(attendees_by_dept$college)) -->
+<!-- ``` -->
+
+<!-- There were `{r} n_attendees` people from `{r} n_depts_attendees` departments representing `{r} n_coll_attendees` colleges who attended. -->
+
+<!-- ```{r fig-attendees-by-dept, fig.cap="Attendees by department", eval=update_figs} -->
+<!-- attendees_by_dept |> -->
+<!--   dplyr::arrange(desc(unit)) |> -->
+<!--   ggplot() + -->
+<!--   aes(x = unit, fill = college) + -->
+<!--   geom_bar() + -->
+<!--   theme(legend.position = "bottom", legend.title = element_blank()) + -->
+<!--   coord_flip() -->
+<!-- ``` -->
+
+<!-- ```{r fig-attendees-by-college, fig.cap="Attendees by college", eval=update_figs} -->
+<!-- attendees_clean |> -->
+<!--   ggplot() + -->
+<!--   aes(x = college, fill = college, color = college) + -->
+<!--   geom_bar() + -->
+<!--   theme(axis.text.x = element_blank()) + -->
+<!--   theme(legend.position = "bottom", legend.title = element_blank()) -->
+<!-- ``` -->
+
+<!-- ### Position -->
+
+<!-- #### Registrations -->
+
+<!-- ```{r fig-registrations-by-position, fig.cap="Registrations by position", eval=update_figs} -->
+<!-- registrations_clean |> -->
+<!--   ggplot() + -->
+<!--   aes(x = position, fill = position) + -->
+<!--   geom_bar() + -->
+<!--   theme(axis.text.x = element_blank()) + -->
+<!--   theme(legend.position = "bottom", legend.title = element_blank()) -->
+<!-- ``` -->
+
+<!-- #### Attendees -->
+
+<!-- ```{r fig-attendees-by-position, fig.cap="Attendees by position", eval=update_figs} -->
+<!-- attendees_clean |> -->
+<!--   ggplot() + -->
+<!--   aes(x = position, fill = position) + -->
+<!--   geom_bar() + -->
+<!--   theme(axis.text.x = element_blank()) + -->
+<!--   theme(legend.position = "bottom", legend.title = element_blank()) -->
+<!-- ``` -->
+
+<!-- ### Listserv subscribers -->
+
+<!-- ```{r fig-list-subscribers-by-college, fig.cap="New list subscribers by college"} -->
+<!-- new_list_subscribers <- registrations_clean |> -->
+<!--   dplyr::filter(add_listserv == "yes") |> -->
+<!--   dplyr::filter(!is.na(college)) -->
+
+<!-- new_list_subscribers |> -->
+<!--   ggplot() + -->
+<!--   aes(x = college, fill = college, color = college) + -->
+<!--   geom_bar() + -->
+<!--   theme(axis.text.x = element_blank()) + -->
+<!--   theme(legend.position = "bottom", legend.title = element_blank()) -->
+
+<!-- n_new_subscribers <- dim(new_list_subscribers)[1] -->
+<!-- ``` -->
+
+<!-- We had `{r} n_new_subscribers` new subscribers to the open science listserv. -->
+
+<!-- ### Case study -->
+
+<!-- ```{r fig-registrations-has-case-study, fig.cap="Do registrants have a possible case study?", eval=update_figs} -->
+<!-- registrations_clean |> -->
+<!--   ggplot() + -->
+<!--   aes(x = have_case_study) + -->
+<!--   geom_bar() -->
+<!-- ``` -->
+
+<!-- ## Consulting OpenAI -->
+
+<!-- Just for fun, we thought we would ask [OpenAI](https://openai.com) for some insights about data management practices. -->
+
+<!-- The following code sketch is not run and will not work as-is, but is used as a sketch for how to do this sort of thing. -->
+
+<!-- ```{r} -->
+<!-- #| label: open-ai-image -->
+<!-- #| eval: FALSE -->
+
+<!-- ai_img <- openai::create_image(prompt = "good enough data management practices", size="512x512", response_format = "url") -->
+<!-- ``` -->
+
+<!-- ![OpenAI response to "good enough data management practices"](include/img/open-ai-good-enough-data-mgmt.png) -->
+
+<!-- Similarly, the response below was generated from the prompt "suggestions about good enough data management practices". -->
+
+<!-- ```{r} -->
+<!-- #| label: open-ai-text -->
+<!-- #| eval: FALSE -->
+
+<!-- create_chat_completion(model = "gpt-3.5-turbo", -->
+<!--                        messages = list( -->
+<!--                          list("role" = "user", -->
+<!--                               "content" = "suggestions about good enough data management practices") -->
+<!--                        )) -->
+<!-- ``` -->
+
+<!-- >1. Regularly backup your data to prevent data loss in case of system failure or accidental deletion. -->
+<!-- >2. Keep your data organized by creating folders and subfolders with clear and consistent naming conventions. -->
+<!-- >3. Use encryption to protect sensitive data from unauthorized access.  -->
+<!-- >4. Implement access controls to ensure that only authorized individuals can view or modify certain data. -->
+<!-- >5. Regularly review and update data security protocols to stay ahead of potential threats. -->
+<!-- >6. Dispose of outdated data securely and in line with data protection regulations. -->
+<!-- >7. Conduct regular data audits to ensure the accuracy and completeness of your data.  -->
+<!-- >8. Train employees on data management best practices to ensure everyone is following proper procedures. -->
+<!-- >9. Utilize data management software or tools to automate and streamline data processes. -->
+<!-- >10. Seek guidance from data management experts or consultants for additional strategies and recommendations. -->
+

@@ -1,0 +1,20 @@
+---
+title: ""
+format: html
+---
+
+## Wednesday, March 27, 2024
+
+The following schedule is current as of 2024-02-13.
+
+All events will be held in the Penn State University Libraries Dewey Room.
+
+08:30 am Coffee</br>
+09:00 am Welcome (Nicole Lazar & Rick Gilmore)</br>
+09:15 am Good enough practices for data management ([Alaina Pearce](people.qmd#alaina-pearce))</br>
+10:15 am Break</br>
+10:30 am Policies ([Briana Wham](people.qmd#briana-wham) & [Ana Enriquez](people.qmd$ana-enriquez))</br>
+11:00 am Interactive workshop</br>
+12:00 pm Lunch</br>
+12:45 pm Next steps</br>
+01:30 pm End of workshop
