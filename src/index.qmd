@@ -23,7 +23,7 @@ Who has time to waste, after all?
 
 ![drywit.com](https://drywit.com/cdn/shop/files/F333B7AF-E198-4C48-A3A7-C321F0F95569.jpg?v=1672289434&width=500)
 
-[Rick Gilmore](people.qmd#rick-gilmore), [John West](people.qmd#john-west) will lead the workshop.
+[Rick Gilmore](people.qmd#rick-gilmore) and [John West](people.qmd#john-west) will lead the workshop.
 
 More details about the [schedule](schedule.qmd) and the [faculty](people.qmd) can be found by following the links.
 
