@@ -45,6 +45,12 @@ There's no way we can cover all of these in a half-day workshop.
 
 ### Data cleaning
 
+- Clean/shorten variable names
+- Clean variable values
+  - Prefer text labels for factors
+
+### Data dictionary
+
 ### Scriptable visualizations & analyses
 
 - Visualizations
