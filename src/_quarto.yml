@@ -19,14 +19,16 @@ website:
     left:
       - href: index.qmd
         text: home
-      - href: schedule.qmd
-        text: schedule
+      # - href: schedule.qmd
+      #   text: schedule
       - href: people.qmd
         text: people
       - href: topics.qmd
         text: topics
       - href: resources.qmd
         text: more
+      - href: data.qmd
+        text: data
   repo-url: https://github.com/penn-state-open-science/quarto-workshop
   repo-actions: [edit, issue]
   repo-subdir: src

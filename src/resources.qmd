@@ -1,5 +1,6 @@
 ---
 title: ""
+date: last-modified
 format:
   html:
     code-fold: true

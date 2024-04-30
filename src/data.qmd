@@ -1,0 +1,182 @@
+---
+title: "data"
+date: last-modified
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
+params:
+  update_data: true
+  update_figs: true
+  interest_survey_results_fn: "Quarto workshop Summer 2024 (Responses)"
+  csv_dir: data/csv
+---
+
+## About
+
+This page has code, images, and data visualizations that support the workshop.
+
+To reveal or hide the code, click on the button at the upper right.
+
+::: {.callout-tip}
+
+Code hiding (folding) and showing is controlled by the `code-fold` and `code-tools` parameters in the YAML header for your document.
+
+:::
+
+## Initial interest survey data
+
+### Download
+
+We download the data as a CSV (if `params$update_data == TRUE`).
+
+```{r set-up-update-data}
+if (!dir.exists(params$csv_dir)) {
+  message("Creating missing '", params$csv_dir, "'.")
+  dir.create(params$csv_dir)
+}
+
+if (params$update_data) {
+  options(gargle_oauth_email = Sys.getenv("GMAIL_SURVEY"))
+  googledrive::drive_auth()
+  
+  new_fn <- file.path(params$csv_dir, "interest-survey-data.csv")
+  if (file.exists(new_fn)) {
+    old_fn <- file.path(params$csv_dir, "_interest-survey-data.csv")
+    message("File '", new_fn, "' exists: Copying old to '", old_fn, "'.")
+    file.rename(new_fn, old_fn)
+  }
+  
+  googledrive::drive_download(
+    params$interest_survey_results_fn,
+    path = new_fn,
+    type = "csv",
+    overwrite = TRUE
+  )
+  message("Data updated.")
+} else {
+  if (!file.exists(new_fn)) {
+    message("File not found: '", new_fn, "': Creating new file.")
+  }
+}
+```
+We load the saved CSV.
+
+```{r load-registration-data}
+if (params$update_figs) {
+  interest <-
+    readr::read_csv(new_fn, show_col_types = FALSE)
+}
+```
+
+### Clean
+
+Generate the beginnings of a data dictionary.
+
+```{r}
+interest_qs <- names(interest)
+interest_dd <- tibble::tibble(question = interest_qs)
+
+interest_dd <- interest_dd |>
+  dplyr::mutate(question_short = c("Timestamp",
+                                   "Email",
+                                   "Interested",
+                                   "Mos",
+                                   "Mon_times",
+                                   "Tue_times",
+                                   "Wed_times",
+                                   "Thu_times",
+                                   "Fri_times",
+                                   "Comments"),
+                question_description = c("Submission time",
+                                         "Respondent email",
+                                         "Interested or not",
+                                         "Which month(s) are preferred",
+                                         "Morning or afternoon on Monday",
+                                         "Morning or afternoon on Tuesday",
+                                         "Morning or afternoon on Wednesday",
+                                         "Morning or afternoon on Thursday",
+                                         "Morning or afternoon on Friday",
+                                         "Respondent comments"))
+```
+
+#### Process the response data.
+
+Rename the variables using the short names.
+
+```{r}
+names(interest) <- interest_dd$question_short
+```
+
+Process the 'Mos' variable.
+
+```{r}
+interest <- interest |>
+  dplyr::mutate(June = stringr::str_detect(Mos, "June"),
+         July = stringr::str_detect(Mos, "July"))
+```
+
+Process the time of day variables.
+
+```{r}
+interest <- interest |>
+  dplyr::mutate(Mon_am = stringr::str_detect(Mon_times, "Morning"),
+         Mon_pm = stringr::str_detect(Mon_times, "Afternoon")) |>
+  
+  dplyr::mutate(Tue_am = stringr::str_detect(Tue_times, "Morning"),
+         Tue_pm = stringr::str_detect(Tue_times, "Afternoon")) |>
+
+  dplyr::mutate(Wed_am = stringr::str_detect(Wed_times, "Morning"),
+         Wed_pm = stringr::str_detect(Wed_times, "Afternoon")) |>
+  
+  dplyr::mutate(Thu_am = stringr::str_detect(Thu_times, "Morning"),
+         Thu_pm = stringr::str_detect(Thu_times, "Afternoon")) |>
+
+  dplyr::mutate(Fri_am = stringr::str_detect(Fri_times, "Morning"),
+         Fri_pm = stringr::str_detect(Fri_times, "Afternoon"))
+```
+
+### Visualize
+
+```{r}
+xtabs(formula = ~ Interested, data = interest)
+```
+
+```{r}
+#| label: "Which-months"
+xtabs(formula = ~ Interested + June, data = interest)
+xtabs(formula = ~ Interested + July, data = interest)
+```
+
+```{r}
+#| label: "Monday-interest"
+xtabs(formula = ~ Interested + Mon_am, data = interest)
+xtabs(formula = ~ Interested + Mon_pm, data = interest)
+```
+
+```{r}
+#| label: "Tuesday-interest"
+xtabs(formula = ~ Interested + Tue_am, data = interest)
+xtabs(formula = ~ Interested + Tue_pm, data = interest)
+```
+
+```{r}
+#| label: "Wednesday-interest"
+xtabs(formula = ~ Interested + Wed_am, data = interest)
+xtabs(formula = ~ Interested + Wed_pm, data = interest)
+```
+
+```{r}
+#| label: "Thursday-interest"
+xtabs(formula = ~ Interested + Thu_am, data = interest)
+xtabs(formula = ~ Interested + Thu_pm, data = interest)
+```
+
+```{r}
+#| label: "Friday-interest"
+xtabs(formula = ~ Interested + Fri_am, data = interest)
+xtabs(formula = ~ Interested + Fri_pm, data = interest)
+```
+
+As of `{r} Sys.time()`, Thursday afternoon seems like the most popular time.
