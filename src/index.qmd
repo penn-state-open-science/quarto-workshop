@@ -29,6 +29,8 @@ More details about the [schedule](schedule.qmd) and the [faculty](people.qmd) ca
 
 ## Location and time
 
+TBD!
+
 :::: {.columns}
 ::: {.column width="40%"}
 <!-- ![Dewey Room, University Libraries](https://sc-api.psu.edu/s3/files/styles/4_3_1500w/public/DSC_6681%20for%20PSNews%20Dewey%20room%20naming.jpg?h=6e526c05&itok=fTahAKyt) -->
@@ -50,13 +52,13 @@ More details about the [schedule](schedule.qmd) and the [faculty](people.qmd) ca
 
 The workshop is open to all researchers, especially graduate students and postdoctoral researchers, but space is limited.
 
-::: {.callout-note}
+<!-- ::: {.callout-note} -->
 
-We have hit the maximum number of pre-registrations we can take for the workshop.
+<!-- We have hit the maximum number of pre-registrations we can take for the workshop. -->
 
-If you wish to be added to the waiting list, please email Rick Gilmore <rog1+workshop@psu.edu>.
+<!-- If you wish to be added to the waiting list, please email Rick Gilmore <rog1+workshop@psu.edu>. -->
 
-:::
+<!-- ::: -->
 
 <!-- Register today by visiting <https://forms.gle/WyD4AxajSnz1Wqe67> -->
 
