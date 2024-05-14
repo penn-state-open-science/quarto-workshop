@@ -14,21 +14,86 @@ There's no way we can cover all of these in a half-day workshop.
 
 :::
 
-## Script everything
+## Core ideas
+
+### Script everything
 
 - [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) WIT
 - What's your [bus factor](https://deviq.com/terms/bus-factor)?
 
 ![https://deviq.com/terms/bus-factor](https://deviq.com/static/c9c9794bce142aea055f201300f9c974/7f61c/bus-factor-400x400.webp)
 
-## Basic tools
+### Computational notebooks
 
-- R, Python, Julia, or bash/shell commands
-- RStudio or Visual Studio Code
+- [@Fowler_undated-ks; @Perkel2018-uj; @Johnson2024-jo]
+- Idea
+  - Literate programming [@Knuth1984-ot]
+- Examples
+  - [Mathematica](https://www.wolfram.com/mathematica/)
+  - [R Markdown](https://rmarkdown.rstudio.com/)
+  - [Quarto](https://quarto.org/)
+  - [Jupyter notebooks](https://docs.jupyter.org/en/latest/)
+
+### Other principles
+
+- Document your journey as you take it (not *post hoc*)
+- Be kind to your future (forgetful) self
+- Run your code early & often; fix bugs early & often
+- Reproducibility "baked-in"
+- Transparent to you $\rightarrow$ more transparent to others
+- *The Checklist Manifesto* [@gawande-2009]
+
+## Software
+
+### Languages
+
+- R, Python, Julia, or shell commands
 - HTML, YAML, CSS
-- git and GitHub
+- [Markdown](https://en.wikipedia.org/wiki/Markdown), [guide](https://www.markdownguide.org/)
+
+::: {.callout-note}
+## What about...
+
+- SPSS
+- MATLAB
+
+Good questions! We'll need to have some answers.
+
+As a start, we should explore whether SPSS can be run easily from the command line. 
+
+MATLAB may be a harder nut to crack, but we should explore [Octave](https://octave.org/).
+
+:::
+
+### Development environments
+
+- Jupyter notebooks
+- RStudio
+- Visual Studio Code
+
+### Tools
+
+- Version control
+  - git and GitHub
 
 ## Research report
+
+```{mermaid}
+%%| fig-cap: "Research report workflow"
+flowchart LR
+A[Gathering] --> B[Cleaning]
+B --> C[Visualizing]
+C --> B
+C --> D[Analyzing]
+D --> B
+D --> C
+D --> E[Reporting]
+D --> F[Sharing]
+A --> G[Documenting]
+B --> G
+G --> E
+G --> F
+```
 
 ### Data gathering
 
@@ -36,20 +101,33 @@ There's no way we can cover all of these in a half-day workshop.
   - Surveys
     - Google Forms
     - Qualtrics
+    - REDCap
   - Behavioral data
     - Local computers
+    - Online sites
+      - Prolific.com
+      - US Census
   - Instrument data
+- File structure
+  - raw
+  - processed
 - Permissions
 - Sharing
-- If using git or GitHub, make use of .gitignore
+  - If using git or GitHub, make use of .gitignore
+  - Where will your data go?
+    - Data standards in your field
+      - e.g., BIDS [@noauthor_2024-ib; @Gorgolewski2016-gf]
 
 ### Data cleaning
 
 - Clean/shorten variable names
 - Clean variable values
-  - Prefer text labels for factors
+  - Text labels for factors
 
-### Data dictionary
+### Data documentation
+
+- Code books and [data dictionaries](https://help.osf.io/article/217-how-to-make-a-data-dictionary)
+  - [Data Documentation Initiative](https://ddialliance.org/)
 
 ### Scriptable visualizations & analyses
 
@@ -60,12 +138,15 @@ There's no way we can cover all of these in a half-day workshop.
 
 ### Examples
 
-- [KoBoToolbox workflow](https://PLAY-behaviorome/KoBoToolbox/)
+- [KoBoToolbox workflow](https://PLAY-behaviorome.github.io/KoBoToolbox/)
+- [Databrary analytics](https://databrary.github.io/analytics/)
+- [@Qian2022-yp] analysis and visualization [workflow](https://gilmore-lab.github.io/sex-differences-project/analysis/qian-berenbaum-gilmore.html).
 
 ## Presentations
 
-- PowerPoint
-- reveal.js (HTML)
+- [reveal.js](https://revealjs.com/)
+  - HTML-based tool
+- MS PowerPoint
 - Beamer
 
 ## Websites
@@ -73,11 +154,14 @@ There's no way we can cover all of these in a half-day workshop.
 ### Project websites
 
 - Examples
-  - [PLAY Project](https://play-project.org) and [An Hour in the Life](https://www.anhourinthelife.org)
+  - [PLAY Project](https://play-project.org) and [An Hour in the Life](https://www.anhourinthelife.org).
   - [Legacy Project: Visual Acuity](https://gilmore-lab.github.io/visual-acuity/)
   - [Open Science Survey](https://penn-state-open-science.github.io/survey-fall-2022/)
 
 ### Blogs
+
+- [rick-gilmore.com](https://rick-gilmore.com)
+- [w3tm.org](https://w3tm.org)
 
 ### Course sites
 
